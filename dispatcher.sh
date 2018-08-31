@@ -1,5 +1,9 @@
 #!/bin/bash
 
+. ./configuration.cnf
+
+echo $STATUS_SERVER_URL
+
 res=$(curl -s localhost:12345/next.php)
 
 if [ "$res" == "IDLE" ]; then
